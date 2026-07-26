@@ -68,11 +68,10 @@ const UserHome = () => {
                         backgroundClip: 'text'
                     }}
                 >
-                    Community Polls
+                    Active Polls
                 </h1>
-                <p className="text-secondary" style={{ maxWidth: '480px', margin: '0 auto' }}>
-                    Vote anonymously on active polls. Your identity is never stored — only your
-                    response.
+                <p className="text-secondary" style={{ maxWidth: '480px', margin: '0 auto', fontSize: 'var(--font-size-sm)' }}>
+                    Have your say on ongoing topics. Express your opinion instantly.
                 </p>
 
                 {/* Stats bar */}
