@@ -70,9 +70,6 @@ const UserHome = () => {
                 >
                     Active Polls
                 </h1>
-                <p className="text-secondary" style={{ maxWidth: '480px', margin: '0 auto', fontSize: 'var(--font-size-sm)' }}>
-                    Have your say on ongoing topics. Express your opinion instantly.
-                </p>
 
                 {/* Stats bar */}
                 <div
