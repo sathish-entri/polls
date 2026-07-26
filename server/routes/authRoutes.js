@@ -8,10 +8,14 @@ const router = express.Router();
 // ── Helper: sign JWT and set httpOnly cookie ──────────────────────────────
 const sendTokenCookie = (res, payload) => {
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '8h' });
+    const isProd = process.env.NODE_ENV === 'production';
     res.cookie('adminToken', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        // secure=true required for sameSite=None (HTTPS only in production)
+        secure: isProd,
+        // 'none' allows cookies to be sent cross-domain (Vercel -> Render)
+        // 'lax' is fine for local dev on same origin
+        sameSite: isProd ? 'none' : 'lax',
         maxAge: 8 * 60 * 60 * 1000 // 8 hours
     });
     return token;
