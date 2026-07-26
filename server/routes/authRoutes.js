@@ -41,10 +41,11 @@ router.post('/login', async (req, res) => {
 
         if (username === superUsername && password === superPassword) {
             const payload = { role: 'superadmin', username: superUsername, source: 'env' };
-            sendTokenCookie(res, payload);
+            const token = sendTokenCookie(res, payload);
             return res.status(200).json({
                 success: true,
                 message: 'Login successful',
+                token, // returned for mobile Bearer token fallback
                 admin: { username: superUsername, role: 'superadmin' }
             });
         }
@@ -84,11 +85,12 @@ router.post('/login', async (req, res) => {
             adminId: adminDoc._id.toString(),
             source: 'db'
         };
-        sendTokenCookie(res, payload);
+        const token = sendTokenCookie(res, payload);
 
         return res.status(200).json({
             success: true,
             message: 'Login successful',
+            token, // returned for mobile Bearer token fallback
             admin: {
                 username: adminDoc.username,
                 role: adminDoc.role,
