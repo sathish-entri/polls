@@ -1,6 +1,6 @@
-# 📊 WhatsApp Poll App - MERN Stack
+# 📊 Polls - MERN Stack
 
-A WhatsApp-style Poll application built with the MERN stack (MongoDB, Express, React, Node.js) featuring anonymous voting, cookie-based vote locking, custom dynamic options (2-6), admin authentication, multi-admin management, and analytics with Chart.js.
+A WhatsApp-inspired Poll application built with the MERN stack (MongoDB, Express, React, Node.js) featuring anonymous voting, cookie-based vote locking, custom dynamic options (2-6), admin authentication, multi-admin management, and analytics with Chart.js.
 
 ---
 
@@ -12,7 +12,7 @@ A WhatsApp-style Poll application built with the MERN stack (MongoDB, Express, R
 - **➕ Dynamic Poll Creation**: Admin can create polls with minimum 2 and maximum 6 options.
 - **👥 Admin Management**: Super Admin can register, activate/deactivate, reset passwords, or delete other sub-admins.
 - **📊 Interactive Analytics**: Real-time stats, bar charts (votes per poll), doughnut charts (option breakdown), poll rankings, and recent activity timeline.
-- **🎨 WhatsApp Dark UI Theme**: Modern aesthetics with glassmorphism, responsive cards, and clean feedback modals.
+- **🎨 Modern Dark UI Theme**: Clean aesthetics with glassmorphism, responsive cards, and custom feedback modals.
 
 ---
 
@@ -36,7 +36,7 @@ Polls/
     │   ├── context/        # AuthContext for admin session
     │   ├── pages/          # UserHome, AdminLogin, AdminDashboard, AdminAnalytics, AdminManagement
     │   ├── App.jsx         # App Routing
-    │   ├── index.css       # Global WhatsApp Dark CSS System
+    │   ├── index.css       # Global Dark CSS Design System
     │   └── main.jsx
     ├── package.json
     └── vite.config.js

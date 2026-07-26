@@ -15,9 +15,8 @@ const Navbar = () => {
         <nav className="navbar">
             {/* Brand */}
             <Link to="/" className="navbar-brand" id="navbar-brand-link">
-                <div className="navbar-logo">📊</div>
                 <span className="navbar-title">
-                    WA<span>Polls</span>
+                    Polls
                 </span>
             </Link>
 
