@@ -55,7 +55,7 @@ const Navbar = () => {
                                 👥 Admins
                             </NavLink>
                         )}
-                        <span className="navbar-badge">
+                        <span className="navbar-badge desktop-only">
                             👤 {admin?.username}
                         </span>
                         <button
