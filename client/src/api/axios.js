@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // Create an axios instance with base URL and credentials support
 const api = axios.create({
-    baseURL: '/api',
+    // In production, VITE_API_URL = your Render backend URL (e.g. https://polls-api.onrender.com/api)
+    // In development, '/api' is proxied to localhost:5000 by Vite
+    baseURL: import.meta.env.VITE_API_URL || '/api',
     withCredentials: true, // Include cookies with every request
     headers: {
         'Content-Type': 'application/json'
